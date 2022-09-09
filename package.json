@@ -1,0 +1,23 @@
+{
+  "name": "discord-music-list-bot",
+  "version": "1.0.0",
+  "description": "The goal of this project is to create a bot that keeps track of all the music played within my friend's discord server.\r This is my first _personal_ project and repository - it serves as the starting point and a place to look back on many months from now.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RAwad18/Discord-Music-List-Bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RAwad18/Discord-Music-List-Bot/issues"
+  },
+  "homepage": "https://github.com/RAwad18/Discord-Music-List-Bot#readme",
+  "dependencies": {
+    "discord.js": "^14.3.0"
+  }
+}
