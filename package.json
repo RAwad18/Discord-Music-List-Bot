@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/RAwad18/Discord-Music-List-Bot#readme",
   "dependencies": {
+    "@discordjs/rest": "^1.1.0",
     "discord.js": "^14.3.0"
   }
 }
