@@ -1,0 +1,17 @@
+Key Objectives:
+    1. Music Bot can play audio
+    2. Music Bot tracks music played and saves it to a text file
+
+Roadmap - Playing Audio
+    1. Register a slash command for play ✔️
+    2. Get Music Bot to join voice channel
+        - if user is not in a VC, display error message "You Must Be in a Voice Channel!"
+        - if user is in a VC, connect to VC
+    3. Get Music Bot to play audio
+    
+
+Current Issues:
+    - Music Bot can't connect to voice channel
+        - "channel" is undefined
+        - "client" is undefined
+    
