@@ -5,13 +5,14 @@ const { token } = require('./config.json');     //retrieves token
 
 // Create a new client instance
 // Specifies which events we want the bot to recieve
-const client = new Client({ 
+const client = new Client({
 	intents: [
 		GatewayIntentBits.Guilds,
 		GatewayIntentBits.GuildMessages,
 		GatewayIntentBits.MessageContent,
 		GatewayIntentBits.GuildMembers,
-	] 
+		GatewayIntentBits.GuildVoiceStates,
+	]
 });
 
 const eventsPath = path.join(__dirname, 'events');

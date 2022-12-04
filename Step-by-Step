@@ -4,14 +4,50 @@ Key Objectives:
 
 Roadmap - Playing Audio
     1. Register a slash command for play ✔️
+
     2. Get Music Bot to join voice channel
-        - if user is not in a VC, display error message "You Must Be in a Voice Channel!"
-        - if user is in a VC, connect to VC
+        - check if user is in a VC
+            - if not, reply to user with "you must be in VC"
+            - if so, move on to next step
+
+        - check if self(bot) is in a vc
+            - if not, connect to VC
+            - if so, move on to next step
+
     3. Get Music Bot to play audio
+        - Check link to see where it belongs to (YouTube, Soundcloud, Spotify, etc.)
+            OR
+        - Only check link to see if it's valid (try catch)
+            - this allows for basically any type of link to play audio (like vimeo or maybe even twitter videos)
+            - This isn't necessary for the scope of this project, but could be something to add later on
+        
+        - For YouTube, if the link has 'shorts' instead of 'watch'...
+            - 1. Replace 'shorts' with 'watch'
+            - 2. Do nothing, if audio is supported
+        
+        - Spotify Issues:
+            - I doubt that playing a url to a spotify song would work
+                - If you have spotify free, you can't play any song you like (as far as I know)
+                - So, we'd need to find a work around somehow (by we I mean me, but 'we' sounds cooler)
+                
+        - Audio will be played via a link
+        - Supported Audio include YouTube and Soundcloud - Spotify would be the next step
+        
+        4. Get Bot to leave the VC under certain conditions
+            - Check if audio is playing
+                - If so, do nothing
+                - If not, then wait a certain amount of time (i.e 5 minutes)
+                    - When testing, we should make this value much shorter (5 seconds)
+                - If a certain amount of time elapses with no audio played, disconnect
+
     
 
 Current Issues:
-    - Music Bot can't connect to voice channel
-        - "channel" is undefined
-        - "client" is undefined
+    - Music Bot connects to VC, but it is inconsistent
+        - Errors are also inconsistent
+            - Either the voice channel ID is not found...
+            - ...Or the bot connects, even when the user has already left
+
+    - I think the issue is that the state of the user is never updated
+        (i.e, whatever the user's state was the last time they ran /play never changes)
     
